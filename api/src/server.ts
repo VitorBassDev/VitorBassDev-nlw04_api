@@ -1,9 +1,28 @@
-import express from 'express'
+import 'reflect-metadata'
+import express, { request, response } from 'express'
 
+// IMPORTAR BANCO DE DADOS
+import "./database"
 const app = express()
 
-// 
-app.get("/user")
+
+// ROTA - (RECURSO)
+app.get("/", (request, response)=>{
+    return response.json({
+      Mensagem: "Rota Principal"
+    })
+})
+
+app.post("/add", (request, response)=>{
+  
+  const nome = request.body
+
+  return response.json({
+    nome,
+    Mensagem: "Dados Enviados com Sucesso",
+  })
+  
+})
 
 
 // START TO SERVER

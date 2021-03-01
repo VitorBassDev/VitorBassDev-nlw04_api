@@ -1,4 +1,4 @@
-## Installation
+## Aula 01
 
 Please follow the [Installation](https://doc.nuxeo.com/n/b1j) guide.
 
@@ -39,4 +39,23 @@ yarn ts-node-dev -D
 yarn init -y - Inicar projeto
 
 yarn add express - Micro FremWork para criação de | Rotas | Servidor | FramWorks
+```
 
+
+## Aula 01
+- Conexão com o banco de dados
+- Query Builders
+- Criação de Models
+- ORM Config - Configurações do Banco de dados
+
+### src/database/index.js
+
+```shell
+npm install sqlite3 --save
+```
+```shell
+yarn add typeorm reflect-metadata
+```
+
+- Configuração de Conexão
+- Caminho do banco de dados
