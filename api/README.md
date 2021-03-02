@@ -42,13 +42,19 @@ yarn add express - Micro FremWork para criação de | Rotas | Servidor | FramWor
 ```
 
 
-## Aula 01
+## Aula 02
 - Conexão com o banco de dados
 - Query Builders
 - Criação de Models
 - ORM Config - Configurações do Banco de dados
 
 ### src/database/index.js
+- Exporta o arquivo de banco de dados
+- Configuração de Conexão
+- Caminho do banco de dados
+
+### src/database/migrations/
+- Configuração para criação no diretório padrão `migrations`
 
 ```shell
 npm install sqlite3 --save
@@ -57,5 +63,19 @@ npm install sqlite3 --save
 yarn add typeorm reflect-metadata
 ```
 
-- Configuração de Conexão
-- Caminho do banco de dados
+### Criação de migrations
+- Script do package.json
+ -- "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
+ 
+- Testar Script
+```shell
+  - yarn typeorm
+```
+
+```shell
+
+```
+
+```shell
+
+```
