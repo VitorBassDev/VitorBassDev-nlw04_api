@@ -89,3 +89,8 @@ yarn add typeorm reflect-metadata
 ### routers.ts
 - Configuração da rotas 
 - Dividir os serviços das rotas
+
+### Models / entidades
+
+- Configuração da rotas 
+- Dividir os serviços das rotas
