@@ -53,9 +53,6 @@ yarn add express - Micro FremWork para criação de | Rotas | Servidor | FramWor
 - Configuração de Conexão
 - Caminho do banco de dados
 
-### src/database/migrations/
-- Configuração para criação no diretório padrão `migrations`
-
 ```shell
 npm install sqlite3 --save
 ```
@@ -66,14 +63,19 @@ yarn add typeorm reflect-metadata
 ### Criação de migrations
 - Script do package.json
  -- "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
- 
-- Testar Script
+
+### src/database/migrations/
+- Configuração para criação no diretório padrão `migrations`
+- script para criação das migrations
+  -- yarn typeorm migrations:create -n CreateUsers
+
+- Rodar a migratio
 ```shell
-  - yarn typeorm
+  - yarn typeorm migration:run
 ```
-
+- Desfazer migration
 ```shell
-
+  - yarn typeorm migration:revert
 ```
 
 ```shell
