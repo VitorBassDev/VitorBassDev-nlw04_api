@@ -8,6 +8,17 @@ class UserController{
     
     const usersRepository = getRepository(User);
 
+    // NÃO SALVAR USUÁRIO COM O MESMO ENDEREÇO DE EMAIL
+    const userAlreadyExists = await usersRepository.findOne({
+      email
+    })
+
+    if(userAlreadyExists){
+      return response.status(400).json({
+        error: "User Already Exists !"
+      })
+    }
+
     const user = usersRepository.create({
       name, email
     })
