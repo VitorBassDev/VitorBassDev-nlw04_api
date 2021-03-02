@@ -78,6 +78,14 @@ yarn add typeorm reflect-metadata
   - yarn typeorm migration:revert
 ```
 
+### src/controller/UserController
+- Configuração da controller `UserController`
+- Configuração da Tipagem do typeScript
+
 ```shell
 
 ```
+
+### routers.ts
+- Configuração da rotas 
+- Dividir os serviços das rotas
