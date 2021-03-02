@@ -1,29 +1,17 @@
 import 'reflect-metadata'
-import express, { request, response } from 'express'
+import express, { json, request, response } from 'express'
+import { router } from './routes'
 
 // IMPORTAR BANCO DE DADOS
 import "./database"
+
 const app = express()
 
+// RECEBER DADOS EM JSON
+app.use(json)
 
-// ROTA - (RECURSO)
-app.get("/", (request, response)=>{
-    return response.json({
-      Mensagem: "Rota Principal"
-    })
-})
-
-app.post("/add", (request, response)=>{
-  
-  const nome = request.body
-
-  return response.json({
-    nome,
-    Mensagem: "Dados Enviados com Sucesso",
-  })
-  
-})
-
+// IMPORTAR AS ROTAS
+app.use(router)
 
 // START TO SERVER
 app.listen(3030, () => {
