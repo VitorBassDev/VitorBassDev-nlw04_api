@@ -108,7 +108,7 @@ yarn add typeorm reflect-metadata
   ]
 
 
-  * [] Alteração do Controller para o Repositório Criado
+  * [x] Alteração do Controller para o Repositório Criado
 
 ```shell
 
@@ -124,11 +124,33 @@ yarn add typeorm reflect-metadata
 
 ### Migration - Pesquisas (Survey)
 
-  * [] Criar Migration de Pesquisas (Survey)
-  * [] Criar Repositório de pesquisas
-  * [] Criar Controller de pesquisas
-
+  * [X] Criar Migration de Pesquisas (Survey)
   ```shell
+    - yarn typeorm migration:create -n CreateSurveys
+  ```
+  * [X] Executar Migration de Pesquisas (Survey)
+  ```shell
+    - yarn typeorm migration:run
+  ```
+  * [X] Criar a Model de Pesquisas (Survey)
+  ```shell
+    - `src/models/Survey.ts`
+  ```
+  * [x] Implementar a models pesquisa de acordo com o a migration criada 
+
+  * [x] Criar Controller de pesquisas (survey)
+  ```shell
+    - `src/controllers/SurveyController.ts`
+  ```
+  * [x] Implementar a Controller pesquisa para receber os métodos
+
+  * [x] Criar o Repositório de pesquisas (survey)
+  ```shell
+    - `src/repositories/SurveyController.ts`
+  ```
+  * [x] Implementar o Repositório pesquisa (survey)
+
+```shell
 
 ```
 ```shell
