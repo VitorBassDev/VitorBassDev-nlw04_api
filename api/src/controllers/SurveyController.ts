@@ -6,7 +6,6 @@ import { SurveyRepository } from "../repositories/SurveyRepository";
 class SurveyController{
   async create(request: Request, response: Response){
     const {title, description} = request.body
-    
     /**
      * Responsabilidade do Repositório
      */
@@ -20,6 +19,16 @@ class SurveyController{
     await surveysRepository.save(survey)
 
     return response.status(201).json(survey)
+  }
+
+  async show(request: Request, response: Response){
+    
+    const surveysRepository = getCustomRepository(SurveyRepository);
+    const all = await surveysRepository.find();
+    
+    return response.status(200).json({
+      all
+    })
   }
 }
 
