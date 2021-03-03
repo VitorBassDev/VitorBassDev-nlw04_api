@@ -1,12 +1,22 @@
 import {Request, Response} from "express";
-import { getRepository } from "typeorm";
+import { getCustomRepository, getRepository } from "typeorm";
 import {User} from "../models/User"
+import { UserRepository } from "../repositories/UsersRepository";
 
 class UserController{
   async create(request: Request, response: Response){
     const {name, email} = request.body
     
+    /**
+     * Responsbailidade do Controller
     const usersRepository = getRepository(User);
+     * 
+    */
+    
+    /**
+     * Responsabilidade do Repositório
+     */
+    const usersRepository = getCustomRepository(UserRepository)
 
     // NÃO SALVAR USUÁRIO COM O MESMO ENDEREÇO DE EMAIL
     const userAlreadyExists = await usersRepository.findOne({

@@ -94,3 +94,47 @@ yarn add typeorm reflect-metadata
 
 - Configuração da rotas 
 - Dividir os serviços das rotas
+
+
+## Refatoração do código 
+  * [] Criar Repositório de Usuário
+
+### scr/repositories/
+  - Repositório de Usuários
+  [ 
+    {
+      UsersRepository.ts
+    }
+  ]
+
+
+  * [] Alteração do Controller para o Repositório Criado
+
+```shell
+
+```
+
+```shell
+
+```
+
+# Aula 03
+
+## Migrations
+
+### Migration - Pesquisas (Survey)
+
+  * [] Criar Migration de Pesquisas (Survey)
+  * [] Criar Repositório de pesquisas
+  * [] Criar Controller de pesquisas
+
+  ```shell
+
+```
+```shell
+
+```
+```shell
+
+```
+
