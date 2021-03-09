@@ -180,12 +180,23 @@ yarn add typeorm reflect-metadata
           "**/__tests__/*test.ts/"
       ],
     `
-    - ``
-    - ``
-
-  ```
-  * [x] Implementar a models pesquisa de acordo com o a migration criada 
 ```shell
 
 ```
+### Teste de Integração
+
+#### Ferramenta - Super Test
+  
+  ```shell
+    - yarn add supertest @types/supertest -D
+  ```
+  Teste de Usuário
+  ```shell
+    * Arquivo `User.test.ts`
+  ```
+
+  ```shell
+    * Alteração no arquivo de banco de dados
+    * Criação do banco de dados de teste
+  ```
 
