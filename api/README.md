@@ -150,12 +150,41 @@ yarn add typeorm reflect-metadata
   ```
   * [x] Implementar o Repositório pesquisa (survey)
 
-```shell
+## Testes
 
-```
-```shell
+### Ferramentas para o Teste
 
-```
+  * [X] Ferramente JEST
+  ```shell
+    - yarn add @types/jest -d
+  ```
+
+    ```shell
+    - yarn add ts-jest -D
+  ```
+
+  * [x] Iniciar o Jest
+  ```shell
+    - yarn jest
+  ```
+    Esse Comando inicia o arquivo jest.config.ts
+
+  * [x] Configura o arquivo `jest.config.ts`
+  ```shell
+    - `bail: true,`
+    - `testEnvironment: "node"` (Desabilitar),
+    - `preset: "ts-jest"`
+    - `
+      * Configuração do testMAtch
+        testMatch: [
+          "**/__tests__/*test.ts/"
+      ],
+    `
+    - ``
+    - ``
+
+  ```
+  * [x] Implementar a models pesquisa de acordo com o a migration criada 
 ```shell
 
 ```
