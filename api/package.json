@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
     "test": "NODE_ENV=test jest",
-    "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
+    "typeorm": "ts-node-dev node_modules/typeorm/cli.js",
+    "posttest": "rm ./src/database/database.test.sqlite"
   },
   "dependencies": {
     "-": "^0.0.1",

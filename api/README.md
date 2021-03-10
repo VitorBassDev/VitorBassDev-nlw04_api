@@ -199,4 +199,8 @@ yarn add typeorm reflect-metadata
     * Alteração no arquivo de banco de dados
     * Criação do banco de dados de teste
   ```
+  ```shell
+    * Excluir banco de dados de teste, após os restes realizados
+    ` "posttest": "rm./src/database/database.test.sqlite"`
+  ```
 
