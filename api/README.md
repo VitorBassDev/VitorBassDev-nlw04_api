@@ -204,4 +204,53 @@ yarn add typeorm reflect-metadata
     * Excluir banco de dados de teste, após os restes realizados
     ` "posttest": "rm./src/database/database.test.sqlite"`
   ```
+# Aula 4
+## Envio de Email - BackEnd
 
+- Criação da Migration de SurveysUser
+- Criação do Repositório SurveysUser
+- Criação do Controller de SurveysUser
+- Configurar Serviço de Email
+- Enviar Email
+
+  * [] Criar Migration de (Survey)
+  ```shell
+    - yarn typeorm migration:create -n CreateSurveysUsers
+  ```
+  * [] Executar Migration de SurveysUsers
+  ```shell
+    - yarn typeorm migration:run
+  ```
+  * [] Criar a Model de SurveysUsers
+  ```shell
+    - `src/models/Survey.ts`
+  ```
+  * [] Implementar a models pesquisa de acordo com o a migration criada 
+
+  * [] Criar Controller de SurveysUsers
+  ```shell
+    - `src/controllers/SurveyController.ts`
+  ```
+  * [] Implementar a Controller pesquisa para receber os métodos
+
+  * [] Criar o Repositório de SurveysUsers
+  ```shell
+    - `src/repositories/SurveyController.ts`
+  ```
+  * [] Implementar o Repositório SurveysUsers
+
+
+```shell
+Express
+yarn add express
+```
+```shell
+yarn add express
+```
+```shell
+yarn add @types/express
+```
+```shell
+types/express
+npm install typescript -D
+```
