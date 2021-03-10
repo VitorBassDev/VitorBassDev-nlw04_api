@@ -193,6 +193,7 @@ yarn add typeorm reflect-metadata
   Teste de Usuário
   ```shell
     * Arquivo `User.test.ts`
+    * Arquivo `Survey.test.ts`
   ```
 
   ```shell
