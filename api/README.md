@@ -213,19 +213,22 @@ yarn add typeorm reflect-metadata
 - Configurar Serviço de Email
 - Enviar Email
 
-  * [] Criar Migration de (Survey)
+  * [x] Criar Migration de (SurveyUsers)
   ```shell
     - yarn typeorm migration:create -n CreateSurveysUsers
   ```
-  * [] Executar Migration de SurveysUsers
+  * [X] Executar Migration de SurveysUsers
   ```shell
     - yarn typeorm migration:run
   ```
-  * [] Criar a Model de SurveysUsers
+  * [x] Implementar Migration de (SurveyUsers)
+
+
+  * [x] Criar a Model de SurveysUsers
   ```shell
-    - `src/models/Survey.ts`
+    - `src/models/SurveyUser.ts`
   ```
-  * [] Implementar a models pesquisa de acordo com o a migration criada 
+  * [x] Implementar a models SurveyUser de acordo com o a migration criada 
 
   * [] Criar Controller de SurveysUsers
   ```shell
