@@ -253,4 +253,16 @@ yarn add typeorm reflect-metadata
   ```shell
     - `yarn add nodemailer`
   ```
-### Configuração de Template
+## Configuração de Template
+  - Handlebars
+  - Configurações do template na pasta `src/views/emails`
+  - Configurações do template de email na pasta `src/views/emails/npsMail.hbs`
+    (*Obs - a extensão `hbs permite que seja escrito html no arquivo`)
+  
+
+* [x] Biblioteca handlebars
+  ```shell
+    - `yarn add handlebars`
+  ```
+* [] Integrar o template handlebars com a API
+

@@ -4,7 +4,8 @@ import { SurveysUsersRepository } from "../repositories/SurveyUsersRepository";
 import { SurveyRepository } from "../repositories/SurveyRepository";
 import { UserRepository } from "../repositories/UsersRepository";
 import SendMailService from "../services/SendMailService";
-
+import {resolve} from "path"
+ 
 
 class SendMailController{
   async execute (request: Request, response: Response){
@@ -14,10 +15,10 @@ class SendMailController{
     const surveysRepository     = getCustomRepository(SurveyRepository)
     const SurveyUsersRepository = getCustomRepository(SurveysUsersRepository)
 
-    const userAlreadExists = await usersRepository.findOne({
+    const user = await usersRepository.findOne({
       email, 
     })
-      if(!userAlreadExists){
+      if(!user){
         return response.status(400).json({
           error: "User does not exists", 
         })
@@ -35,7 +36,7 @@ class SendMailController{
     // SALVAR AS INFORMAÇÕES NA TABELA SURVEYuSER
       
     const surveyUser = SurveyUsersRepository.create({
-      user_id: userAlreadExists.id,
+      user_id: user.id,
       survey_id
     })  
     await SurveyUsersRepository.save(surveyUser)
@@ -43,7 +44,15 @@ class SendMailController{
     /**
      * CONFIGURAÇÃO DO ENVIO DO EMAIL
      */
-    await SendMailService.execute(email, survey.title, survey.description)
+    const npsPath = resolve(__dirname, "..", "views", "emails", "npsMail.hbs")
+
+    const variables = {
+      name: user.name,
+      title: survey.title,
+      description: survey.description
+    }
+
+    await SendMailService.execute(email, survey.title, variables, npsPath)
 
     return response.json(surveyUser);
 
