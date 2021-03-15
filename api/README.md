@@ -266,5 +266,4 @@ yarn add typeorm reflect-metadata
   ```
 * [x] Integrar o template handlebars com a API
 * [x] Configurar variável de Ambiente para comunicação da handlebars com a API
-
-
+* [x] Não Deixar que o mesmo usuário responda apenas uma pesquisa
