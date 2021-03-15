@@ -234,26 +234,23 @@ yarn add typeorm reflect-metadata
   ```shell
     - `src/controllers/SurveyController.ts`
   ```
-  * [] Implementar a Controller pesquisa para receber os métodos
+  * [x] Implementar a Controller pesquisa para receber os métodos
 
-  * [] Criar o Repositório de SurveysUsers
+  * [x] Criar o Repositório de SurveysUsers
   ```shell
     - `src/repositories/SurveyController.ts`
   ```
-  * [] Implementar o Repositório SurveysUsers
+  * [x] Implementar o Repositório SurveysUsers
 
 
-```shell
-Express
-yarn add express
-```
-```shell
-yarn add express
-```
-```shell
-yarn add @types/express
-```
-```shell
-types/express
-npm install typescript -D
-```
+## Configuração do Envio de Email - BackEnd
+
+  - nodemailer
+  - Configurações na pasta `src/services/SendMailService.ts`
+  - Implementação do Envio de Email
+
+* [x] Biblioteca nodemailer
+  ```shell
+    - `yarn add nodemailer`
+  ```
+### Configuração de Template
