@@ -33,8 +33,14 @@ class SendMailController{
           error: "Survey does not exists", 
         })
       }    
+
+    // VERIFICAR SE O USUÁRIO JÁ POSSÚI PESQUISA CADASTRADA
+    const surveyUserAlreadyExists = await SurveyUsersRepository.findOne({
+      where: [{user_id: user.id}, {value: null}]
+    })
+
+
     // SALVAR AS INFORMAÇÕES NA TABELA SURVEYuSER
-      
     const surveyUser = SurveyUsersRepository.create({
       user_id: user.id,
       survey_id
