@@ -264,5 +264,7 @@ yarn add typeorm reflect-metadata
   ```shell
     - `yarn add handlebars`
   ```
-* [] Integrar o template handlebars com a API
+* [x] Integrar o template handlebars com a API
+* [x] Configurar variável de Ambiente para comunicação da handlebars com a API
+
 
