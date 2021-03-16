@@ -267,3 +267,22 @@ yarn add typeorm reflect-metadata
 * [x] Integrar o template handlebars com a API
 * [x] Configurar variável de Ambiente para comunicação da handlebars com a API
 * [x] Não Deixar que o mesmo usuário responda apenas uma pesquisa
+
+
+
+# Aula 04
+
+  [] Refatoração da controller SendMailController
+  [] Criação de Controller de resposta ao usuário
+      - Validações e alteração da nota.
+  [] Criação da controller do calculo do NPS
+  [] Validações
+
+
+## Controller de Resposta
+  - Criação da controller de resposta de SurveysUser `src/controller/AnswerController.ts`
+ 
+  * [x] Criar Migration de (SurveyUsers)
+  ```shell
+    - yarn typeorm migration:create -n CreateSurveysUsers
+  ```  

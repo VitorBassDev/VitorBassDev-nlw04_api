@@ -3,13 +3,12 @@
  */
 
 import nodemailer, {Transporter} from 'nodemailer'
-import {resolve} from 'path'
 import handlebars from 'handlebars'
 import fs from 'fs'
 
 class SendMailService {
 
-  private client: Transporter 
+  private client: Transporter;
 
   /**
    * CONSTRUTOR QUE RECEBE TODOS OS DADOS PADRÕES
